@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#E5D4FF"
+    >
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E5D4FF"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#E5D4FF"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="12dp"
+        >
+<!--        logo de app-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="112dp"
+            android:src="@drawable/cal"
+            android:layout_marginBottom="5dp"
+            />
+
+<!--        de EditText pour enree les valeur-->
+
+        <EditText
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:hint="Entrez une valeur 1"
+            android:layout_gravity="center"
+            android:background="#DCBFFF"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+
+            ></EditText>
+
+        <EditText
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:hint="Entrez une valeur 2"
+            android:layout_gravity="center"
+            android:background="#DCBFFF"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            ></EditText>
+
+<!--  choix des operatoe-->
+
+        <RadioGroup
+            android:id="@+id/gr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+
+            >
+
+            <RadioButton
+                android:id="@+id/plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="plus"
+                android:textSize="22sp"
+                android:textColor="#7743DB"
+                android:textStyle="bold"
+                android:outlineAmbientShadowColor="#7743DB"
+                />
+
+            <RadioButton
+                android:id="@+id/mois"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="moins"
+                android:textSize="22sp"
+                android:textColor="#7743DB"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/multiplic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="multiplie"
+                android:textSize="22sp"
+                android:textColor="#7743DB"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/divise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="divise"
+                android:textSize="22sp"
+                android:textColor="#7743DB"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+<!--        Affichage des resultat-->
+
+        <EditText
+            android:id="@+id/res"
+            android:layout_width="212dp"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:hint="Resulta"
+            android:layout_gravity="center"
+            android:background="#DCBFFF"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            ></EditText>
+
+<!--        Le bouton Raz doit remettre les valeurs des opérandes à vide ; -->
+<!--     Le bouton = doit effectuer l'opération, en fonction de l’opérateur sélectionné (sous réserve que
+ce soit possible) ;-->
+
+        <LinearLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Raz"
+                android:textSize="18sp"
+                android:backgroundTint="#D0A2F7"
+                android:textColor="#7743DB"
+                android:layout_marginRight="3dp"
+                android:id="@+id/reset"
+                android:onClick="reset"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:textSize="18sp"
+                android:backgroundTint="#D0A2F7"
+                android:textColor="#7743DB"
+                android:layout_marginLeft="3dp"
+                android:onClick="calculate"
+                android:id="@+id/calculate"
+                />
+
+        </LinearLayout>
+
+
+<!--   Le bouton Quitter doit permettre de quitter l'application     -->
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#D0A2F7"
+            android:gravity="center"
+            android:text="Quitter"
+            android:textColor="#7743DB"
+            android:textSize="18sp"
+            android:onClick="quitter"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout></ScrollView>
